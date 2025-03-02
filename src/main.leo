@@ -1,7 +1,7 @@
 import credits.aleo;
 import token_registry.aleo;
 
-program zk_prediction_market.aleo {
+program sushant_zk_prediction_market.aleo {
     // Structs
     struct PredictionStake {
         account: address,

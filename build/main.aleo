@@ -1,6 +1,6 @@
 import credits.aleo;
 import token_registry.aleo;
-program zk_prediction_market.aleo;
+program sushant_zk_prediction_market.aleo;
 
 struct TokenMetadata:
     token_id as field;
@@ -62,7 +62,7 @@ function initialize:
     gt r1 0u64 into r2;
     assert.eq r2 true;
     async initialize r0 r1 into r3;
-    output r3 as zk_prediction_market.aleo/initialize.future;
+    output r3 as sushant_zk_prediction_market.aleo/initialize.future;
 
 finalize initialize:
     input r0 as address.public;
@@ -81,9 +81,9 @@ function stake_public:
     input r2 as boolean.private;
     gt r1 0u64 into r3;
     assert.eq r3 true;
-    call credits.aleo/transfer_public_as_signer zk_prediction_market.aleo r1 into r4;
+    call credits.aleo/transfer_public_as_signer sushant_zk_prediction_market.aleo r1 into r4;
     async stake_public self.caller r0 r1 r2 11111111111111111111field r4 into r5;
-    output r5 as zk_prediction_market.aleo/stake_public.future;
+    output r5 as sushant_zk_prediction_market.aleo/stake_public.future;
 
 finalize stake_public:
     input r0 as address.public;
@@ -119,7 +119,7 @@ function resolve_event:
     input r0 as field.private;
     input r1 as boolean.private;
     async resolve_event self.caller r0 r1 into r2;
-    output r2 as zk_prediction_market.aleo/resolve_event.future;
+    output r2 as sushant_zk_prediction_market.aleo/resolve_event.future;
 
 finalize resolve_event:
     input r0 as address.public;
@@ -143,7 +143,7 @@ function claim_public:
     assert.eq r2 true;
     call credits.aleo/transfer_public self.caller r1 into r3;
     async claim_public self.caller r0 r1 11111111111111111111field r3 into r4;
-    output r4 as zk_prediction_market.aleo/claim_public.future;
+    output r4 as sushant_zk_prediction_market.aleo/claim_public.future;
 
 finalize claim_public:
     input r0 as address.public;
@@ -180,7 +180,7 @@ finalize claim_public:
 
 function unpause:
     async unpause self.caller into r0;
-    output r0 as zk_prediction_market.aleo/unpause.future;
+    output r0 as sushant_zk_prediction_market.aleo/unpause.future;
 
 finalize unpause:
     input r0 as address.public;
@@ -190,7 +190,7 @@ finalize unpause:
 
 function pause:
     async pause self.caller into r0;
-    output r0 as zk_prediction_market.aleo/pause.future;
+    output r0 as sushant_zk_prediction_market.aleo/pause.future;
 
 finalize pause:
     input r0 as address.public;
@@ -201,7 +201,7 @@ finalize pause:
 function change_limit:
     input r0 as u64.private;
     async change_limit self.caller r0 into r1;
-    output r1 as zk_prediction_market.aleo/change_limit.future;
+    output r1 as sushant_zk_prediction_market.aleo/change_limit.future;
 
 finalize change_limit:
     input r0 as address.public;
@@ -216,7 +216,7 @@ function withdraw:
     input r0 as u64.private;
     call credits.aleo/transfer_public self.caller r0 into r1;
     async withdraw r0 self.caller r1 into r2;
-    output r2 as zk_prediction_market.aleo/withdraw.future;
+    output r2 as sushant_zk_prediction_market.aleo/withdraw.future;
 
 finalize withdraw:
     input r0 as u64.public;

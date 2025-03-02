@@ -1,4 +1,4 @@
-# zk_prediction_market.aleo
+# sushant_zk_prediction_market.aleo
 
 ## Build Guide
 
