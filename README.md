@@ -1,3 +1,6 @@
+## Deployed contract:
+at1ye5axudqp3jzqmkv55p0vy2sw4jlmtdlsh90v75xcatvyj82k59s4qdfjj
+
 # Welcome to the Zero-Knowledge Prediction Market
 
 Hey there! Imagine a world where you can bet on the future—will it rain this afternoon? Will your favorite team win?—all while keeping your moves secret and the game fair. That’s what `zk_prediction_market.aleo` brings to the Aleo blockchain: a prediction market powered by zero-knowledge magic, with a twist that’ll make you say, "Whoa, that’s cool!"
